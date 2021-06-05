@@ -14,7 +14,7 @@ class TravelCard extends StatelessWidget {
             context,
             PageRouteBuilder(
               pageBuilder: (context, animation, secondaryAnimation) =>
-                  TravelDetails(image: data!.image),
+                  TravelDetails(data: data),
             ));
       },
       child: Padding(
@@ -49,9 +49,12 @@ class TravelCard extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Icon(Icons.star),
-                              Text(
-                                "4.5",
-                                textAlign: TextAlign.center,
+                              Container(
+                                color: Colors.white,
+                                child: Text(
+                                  "4.5",
+                                  textAlign: TextAlign.center,
+                                ),
                               )
                             ],
                           )),
